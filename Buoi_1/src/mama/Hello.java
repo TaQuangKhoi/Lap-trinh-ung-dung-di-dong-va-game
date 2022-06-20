@@ -15,7 +15,7 @@ public class Hello {
         byte result;
         result = (byte) (a + b);
 
-        logger.log(Level.INFO, result);
+        logger.log(Level.INFO, "");
 	}
 
 }
