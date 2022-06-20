@@ -1,16 +1,21 @@
 package mama;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 public class Hello {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hello World");
+		Logger logger
+            = Logger.getLogger(
+                Hello.class.getName());
+
+		logger.log(Level.INFO, "Hello World");
 		byte a = 3;     
         byte b = 8;     
         byte result;
         result = (byte) (a + b);
 
-        System.out.println(result);
+        logger.log(Level.INFO, result);
 	}
 
 }
