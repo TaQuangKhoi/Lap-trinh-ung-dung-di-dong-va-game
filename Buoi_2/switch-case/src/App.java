@@ -5,7 +5,7 @@ public class App {
         char c;
         String str = JOptionPane.showInputDialog(null, "Nhap vao ky tu");
         c = str.charAt(0);
-        switch(c)
+        switch(c) // Có 6 nhánh
         {
             case 'a': case 'e': case 'i': case 'o': case 'u':
                 System.out.println("Nguyen am");
