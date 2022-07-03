@@ -3,6 +3,6 @@ public class LaToi {
 		System.out.println("Cho em mai, nu cuoi no tren moi");
 		boolean EmYeuToi = false;
 		final boolean ToiTiepTuc = true;
-byte i = 127;
+		byte i = 127;
 	}
 }
