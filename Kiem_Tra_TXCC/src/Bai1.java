@@ -12,6 +12,7 @@ public class Bai1 {
 		
 		System.out.println("So ky tu cua xau: " + bien_nhap_vao.length());
 		System.out.println("So ky tu chu so cua xau: " + DemCacSo(bien_nhap_vao));
+		System.out.println("So ky tu chu cua xau: " + DemKyTuChu(bien_nhap_vao));
 		System.out.println("So tu trong xau: " + DemCacTu(bien_nhap_vao));
 		
 		sc.close();
@@ -23,6 +24,17 @@ public class Bai1 {
 		int dem = 0;
 		for(int i=0; i < xau.length(); i++) {
 			Boolean dung_khong = Character.isDigit(xau.charAt(i));
+	         if(dung_khong) {
+	            dem++;
+	         }
+		}
+		return dem;
+	}
+	
+	static int DemKyTuChu(String xau) {
+		int dem = 0;
+		for(int i=0; i < xau.length(); i++) {
+			Boolean dung_khong = Character.isLetter(xau.charAt(i));
 	         if(dung_khong) {
 	            dem++;
 	         }
