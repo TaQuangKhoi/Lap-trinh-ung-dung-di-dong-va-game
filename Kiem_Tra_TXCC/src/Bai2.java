@@ -21,16 +21,16 @@ class SinhVien{
 	{
 		Scanner nhap_thong_tin = new Scanner(System.in);
 		
-		System.out.println("Nhập mã sinh vien: ");
+		System.out.println("Nhap mã sinh vien: ");
 		this.ma_sinh_vien = nhap_thong_tin.nextLine();
 		
-		System.out.println("Nhập họ tên sinh vien: ");
+		System.out.println("Nhap họ tên sinh vien: ");
 		this.ho_ten = nhap_thong_tin.nextLine();
 		
-		System.out.println("Nhập điểm lý thuyết: ");
+		System.out.println("Nhap diem lý thuyết: ");
 		this.diem_ly_thuyet = nhap_thong_tin.nextFloat(); nhap_thong_tin.nextLine();
 		
-		System.out.println("Nhập điểm thực hành: ");
+		System.out.println("Nhap diem thực hành: ");
 		this.diem_thuc_hanh = nhap_thong_tin.nextFloat();
 		
 		nhap_thong_tin.close();
@@ -41,17 +41,17 @@ class SinhVien{
 	}
 	
 	void XuatThongTin() {
-		System.out.println("Mã sinh vien la: " + this.ma_sinh_vien);
-		System.out.println("Tên sinh vien la: " + this.ho_ten);
+		System.out.println("Ma sinh vien la: " + this.ma_sinh_vien);
+		System.out.println("Ten sinh vien la: " + this.ho_ten);
 		System.out.println("Diem ly thuyet la: " + this.diem_ly_thuyet);
 		System.out.println("Diem thuc hanh la: " + this.diem_thuc_hanh);
 		System.out.println("Diem trung binh la: " + this.DiemTB());
 		if (this.DiemTB() >= 5){
-			System.out.println("Sinh vien Đậu");
+			System.out.println("Sinh vien Dau");
 		}
 		else
 		{
-			System.out.println("Sinh vien Rớt");
+			System.out.println("Sinh vien Rot");
 		}
 	}
 }
