@@ -1,6 +1,6 @@
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
 
 public class Bai1 {
 
@@ -11,7 +11,7 @@ public class Bai1 {
 		String bien_nhap_vao = sc.nextLine();
 		
 		System.out.println("So ky tu cua xau: " + bien_nhap_vao.length());
-		System.out.println("So ky tu chu so cua xau: " + DemCacSo(bien_nhap_vao));
+		System.out.println("So ky tu so cua xau: " + DemCacSo(bien_nhap_vao));
 		System.out.println("So ky tu chu cua xau: " + DemKyTuChu(bien_nhap_vao));
 		System.out.println("So tu trong xau: " + DemCacTu(bien_nhap_vao));
 		
@@ -45,15 +45,18 @@ public class Bai1 {
 	static int DemCacTu(String xau) {
 		
 		int dem = 0;
+		xau.trim();
 		for(int i=0; i < xau.length(); i++) {
 			Boolean dung_khong = Character.isWhitespace(xau.charAt(i));
 			//Boolean laSo = Character.isDigit(xau.charAt(i+1));
 			//Boolean laChu = Character.isLetter(xau.charAt(i+1));
-			if (i < xau.length()) {
+			if (i < xau.length() - 1) {
 				if(dung_khong
-						&& (Character.isDigit(xau.charAt(i+1)) || Character.isLetter(xau.charAt(i+1)))
-						&& !Character.isWhitespace(xau.charAt(i+1))
-						) {
+					&& Character.isLetter(xau.charAt(i+1))
+					&& !Character.isWhitespace(xau.charAt(i+1))
+					
+					)
+				{
 		            dem++;
 				}
 			}
