@@ -2,18 +2,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#116A60">
+    android:background="#188A7D"
+    android:gravity="center"
+    android:layout_margin="5dp"
+    android:ignoreGravity="@id/view_1">
+
     <TextView
+        android:id="@+id/view_1"
         android:layout_width="750px"
         android:layout_height="750px"
-        android:background="#C31C50"/>
+        android:layout_alignParentBottom="true"
+        android:background="#C31C50"
+        android:gravity="center" />
+
     <TextView
+        android:id="@+id/view_2"
         android:layout_width="500px"
         android:layout_height="500px"
-        android:background="#87BF36"/>
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="#87BF36"
+        android:gravity="center" />
+
     <TextView
+        android:id="@+id/view_3"
         android:layout_width="250px"
         android:layout_height="250px"
-        android:background="#B925D3"/>
+        android:layout_centerInParent="true"
+        android:background="#B925D3"
+        android:gravity="center" />
 
 </RelativeLayout>
