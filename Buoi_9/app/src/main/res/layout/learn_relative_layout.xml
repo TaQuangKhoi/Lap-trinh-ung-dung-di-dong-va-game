@@ -11,7 +11,6 @@
         android:id="@+id/view_1"
         android:layout_width="750px"
         android:layout_height="750px"
-        android:layout_alignParentBottom="true"
         android:background="#C31C50"
         android:gravity="center" />
 
@@ -19,8 +18,7 @@
         android:id="@+id/view_2"
         android:layout_width="500px"
         android:layout_height="500px"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
+        android:layout_below="@id/view_1"
         android:background="#87BF36"
         android:gravity="center" />
 
@@ -28,7 +26,8 @@
         android:id="@+id/view_3"
         android:layout_width="250px"
         android:layout_height="250px"
-        android:layout_centerInParent="true"
+        android:layout_alignRight="@id/view_2"
+        android:layout_alignBottom="@id/view_2"
         android:background="#B925D3"
         android:gravity="center" />
 
