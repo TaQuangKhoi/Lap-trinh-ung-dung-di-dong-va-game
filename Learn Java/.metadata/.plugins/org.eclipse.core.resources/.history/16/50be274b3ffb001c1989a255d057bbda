@@ -1,0 +1,31 @@
+
+public class Bai2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SinhVien sv1 = new SinhVien();
+		sv1.NhapThongTin();
+	}
+
+}
+
+class SinhVien{
+	String ma_sinh_vien;
+	String ho_ten;
+	float diem_ly_thuyet;
+	float diem_thuc_hanh;
+	
+	void NhapThongTin()
+	{
+		
+	}
+	
+	float DiemTB() {
+		return (this.diem_ly_thuyet + this.diem_thuc_hanh)/2;
+	}
+	
+	void XuatThongTin() {
+		System.out.println("Mã sinh vien la: " + this.ma_sinh_vien);
+		System.out.println("Tên sinh vien la: " + this.ho_ten);
+	}
+}

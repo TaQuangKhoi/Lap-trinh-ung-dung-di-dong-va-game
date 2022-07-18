@@ -1,0 +1,21 @@
+
+public class Bai2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SinhVien sv1 = new SinhVien();
+	}
+
+}
+
+class SinhVien{
+	String ma_sinh_vien;
+	String ho_ten;
+	String diem_ly_thuyet;
+	String diem_thuc_hanh;
+	
+	void NhapThongTin()
+	{
+		
+	}
+}

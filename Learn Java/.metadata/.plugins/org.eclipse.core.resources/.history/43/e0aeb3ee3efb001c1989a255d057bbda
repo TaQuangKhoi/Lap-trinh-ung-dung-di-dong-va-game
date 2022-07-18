@@ -1,0 +1,25 @@
+
+public class Bai2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SinhVien sv1 = new SinhVien();
+	}
+
+}
+
+class SinhVien{
+	String ma_sinh_vien;
+	String ho_ten;
+	float diem_ly_thuyet;
+	float diem_thuc_hanh;
+	
+	void NhapThongTin()
+	{
+		
+	}
+	
+	float DiemTB(float diem_ly_thuyet, float diem_thuc_hanh) {
+		
+	}
+}

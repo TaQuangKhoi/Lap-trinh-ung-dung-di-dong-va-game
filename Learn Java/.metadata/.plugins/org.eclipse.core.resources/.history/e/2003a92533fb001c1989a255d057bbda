@@ -1,0 +1,13 @@
+
+public class TestNe {
+	private int number = 10;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print("Khôi");
+	}
+	public void Print() {
+		int number = 10;
+		System.out.print(number);
+		this.number = 20;
+	}
+}

@@ -1,0 +1,23 @@
+
+public class TestNe {
+	private int number = 10;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print("Khôi 2 ");
+		TestNe tn = new TestNe();
+		TestNe tn2 = tn;
+		tn2.Them();
+		
+		System.out.print(tn2.number);
+	}
+	public void Print() {
+		int number = 30;
+		System.out.print(number);
+		this.number = 20;
+		System.out.print(this.number);
+	}
+	
+	public void Them() {
+		this.number = this.number +1;
+	}
+}
