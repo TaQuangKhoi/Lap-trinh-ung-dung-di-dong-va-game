@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#40B6AAAA">
+
+    <TextView
+        android:id="@+id/txt_dang_nhap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="đăng nhập"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/etxt_email_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập Email hoặc Số điện thoại"
+        android:layout_below="@id/txt_dang_nhap"/>
+    <EditText
+        android:id="@+id/etxt_mat_khau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Nhập mật khẩu"
+        android:layout_below="@id/etxt_email_sdt"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/etxt_mat_khau"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="đăng nhập"
+            android:textAllCaps="true"
+            ></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="quên mật khẩu"
+            android:textAllCaps="true"
+            ></Button>
+    </LinearLayout>
+
 
 </RelativeLayout>

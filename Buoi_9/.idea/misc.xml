@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Java/jdk-18.0.1.1/eclipse-workspace/Buoi_9/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Java/jdk-18.0.1.1/eclipse-workspace/Buoi_9/app/src/main/res/layout/learn_constraint_layout.xml" value="0.16799999999999998" />
         <entry key="..\:/Java/jdk-18.0.1.1/eclipse-workspace/Buoi_9/app/src/main/res/layout/learn_relative_layout.xml" value="0.136" />
+        <entry key="..\:/Java/jdk-18.0.1.1/eclipse-workspace/Buoi_9/app/src/main/res/layout/login_ui.xml" value="0.16" />
       </map>
     </option>
   </component>
