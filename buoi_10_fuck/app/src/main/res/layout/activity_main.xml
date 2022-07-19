@@ -12,16 +12,31 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
-        android:text="TextView nè"
-        android:textSize="30dp"
-        android:textAlignment="center"/>
+        android:text="Nhập Tên"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv1"
+        android:hint="Nhập tên của mày"
+        android:textSize="30dp" />
+
     <Button
         android:id="@+id/btn1"
-        android:text="onClick"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv1"
+        android:layout_below="@+id/et1"
         android:layout_centerInParent="true"
-        android:onClick="doitext"/>
+        android:text="Hiện tên" />
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn1"
+        android:layout_centerInParent="true"
+        android:text="Hiện Dialog" />
 
 </RelativeLayout>
