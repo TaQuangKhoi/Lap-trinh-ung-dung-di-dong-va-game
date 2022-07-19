@@ -9,11 +9,13 @@
     tools:context=".MainActivity">
 
     <Button
+        android:background="@drawable/btn"
         android:layout_width="600px"
         android:layout_height="wrap_content"
         android:text="B1"
         android:textColor="#CD1B62"
-        app:cornerRadius="20dp" />
+        app:cornerRadius="20dp"
+        />
     <Button
         android:textColor="#CD1B62"
         android:text="B2"
