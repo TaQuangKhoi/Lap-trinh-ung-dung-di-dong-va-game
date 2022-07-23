@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this,
                 et1.getText().toString(), Toast.LENGTH_SHORT).show();*/
         AlertDialog.Builder al1 = new AlertDialog.Builder(this);
-        al1.setTitle("");
-        al1.setMessage("Thử nghiệm");
         al1.setIcon(R.drawable.ic_plus);
+        al1.setTitle("Tiêu đề");
+        al1.setMessage("Thử nghiệm");
         al1.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, "Đã nhấn không đồng ý", Toast.LENGTH_SHORT).show();
             }
         });
-        al1.setNeutralButton("Cancel", new DialogInterface.OnClickListener(){
+        AlertDialog.Builder builder = al1.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Toast.makeText(MainActivity.this, "Đã nhấn huỷ", Toast.LENGTH_SHORT).show();
