@@ -7,17 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Cach_1 extends AppCompatActivity {
-
-
+public class Cach_2 extends AppCompatActivity implements View.OnClickListener {
+    Button btnc2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cach1);
+        setContentView(R.layout.activity_cach2);
 
+        btnc2 = findViewById(R.id.btnc2);
+        btnc2.setOnClickListener(this);
     }
 
-    public void Cach1(View view){
+    @Override
+    public void onClick(View view) {
         Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
     }
 }

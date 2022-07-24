@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btn2 = findViewById(R.id.btnc2);
         btn3 = findViewById(R.id.btnc3);
         Intent cach_1 = new Intent(this, Cach_1.class);
+        Intent cach_2 = new Intent(this, Cach_2.class);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Cách 2", Toast.LENGTH_SHORT).show();
+                startActivity(cach_2);
+            }
+        });
 
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,
+                        "Chính là cách đang sử dụng để hiện Toast này",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
