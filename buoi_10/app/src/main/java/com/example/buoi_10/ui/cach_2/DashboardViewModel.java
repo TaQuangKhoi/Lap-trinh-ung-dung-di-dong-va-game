@@ -10,7 +10,7 @@ public class DashboardViewModel extends ViewModel {
 
     public DashboardViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("Cách 2: Ghi đè phương thức onClick của interface View.OnClickListenner");
     }
 
     public LiveData<String> getText() {
