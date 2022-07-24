@@ -14,22 +14,25 @@ import android.widget.Toast;
 
 import androidx.navigation.ui.AppBarConfiguration;
 
-import com.example.buoi_10_fuck.databinding.ActivityMainBinding;
+//import com.example.buoi_10_fuck.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class cach_3 extends AppCompatActivity implements View.OnClickListener{
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    //private ActivityMainBinding binding;
     private TextView tv1;
     private Button btn1;
     private Button btn2;
     private EditText et1;
 
+    public cach_3() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main); // Chỉnh cái này
+        setContentView(R.layout.cach_3); // Chỉnh cái này
 
         // Ánh xạ
         tv1 = (TextView)findViewById(R.id.tv1); // Thêm cài này để ánh xạ:v - từ android 3., có thễ bỏ qua ép kiểu
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        //tv1.setText("Cách 3");
+        // Cách 3
         /*
         Toast.makeText(this,
                 et1.getText().toString(), Toast.LENGTH_SHORT).show();*/
@@ -64,19 +67,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         al1.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(MainActivity.this, "Đã nhấn đồng ý", Toast.LENGTH_SHORT).show();
+                Toast.makeText(cach_3.this, "Đã nhấn đồng ý", Toast.LENGTH_SHORT).show();
             }
         });
         al1.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(MainActivity.this, "Đã nhấn không đồng ý", Toast.LENGTH_SHORT).show();
+                Toast.makeText(cach_3.this, "Đã nhấn không đồng ý", Toast.LENGTH_SHORT).show();
             }
         });
         AlertDialog.Builder builder = al1.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(MainActivity.this, "Đã nhấn huỷ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(cach_3.this, "Đã nhấn huỷ", Toast.LENGTH_SHORT).show();
             }
         });
         al1.show();
