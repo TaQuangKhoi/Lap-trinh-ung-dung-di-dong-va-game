@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 || super.onSupportNavigateUp();
     }
 */
-    /*
+
     public void doitext(View view) {
         textView.setText("jadh");
-    }*/
+    }
 }
