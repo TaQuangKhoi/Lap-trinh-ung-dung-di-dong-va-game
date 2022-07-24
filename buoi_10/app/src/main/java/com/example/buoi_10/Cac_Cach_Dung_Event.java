@@ -36,6 +36,7 @@ public class Cac_Cach_Dung_Event extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+    // Cách 1: Đăng ký sự kiện trong file XML - Using Layout file activity_main.xml to specify event handler directly.
     public void Cach1 (View v) {
         Toast.makeText(this, "Cach 1", Toast.LENGTH_SHORT).show();
     }
