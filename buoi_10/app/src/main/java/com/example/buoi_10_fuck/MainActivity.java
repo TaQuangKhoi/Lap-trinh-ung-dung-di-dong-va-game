@@ -91,6 +91,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 */
 
     public void doitext(View view) {
-        textView.setText("jadh");
+        //textView.setText("jadh");
     }
 }
