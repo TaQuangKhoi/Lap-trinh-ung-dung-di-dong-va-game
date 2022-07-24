@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.buoi_10.ui.notifications.NotificationsFragment">
+    tools:context="com.example.buoi_10.ui.cach_3.NotificationsFragment">
 
     <TextView
         android:id="@+id/text_notifications"
