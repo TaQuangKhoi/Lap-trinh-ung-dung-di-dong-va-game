@@ -1,6 +1,8 @@
 package com.example.buoi_10;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -34,4 +36,7 @@ public class Cac_Cach_Dung_Event extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+    public void Cach1 (View v) {
+        Toast.makeText(this, "Cach 1", Toast.LENGTH_SHORT).show();
+    }
 }
