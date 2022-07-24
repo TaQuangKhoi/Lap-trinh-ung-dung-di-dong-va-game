@@ -12,7 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_centerInParent="true"
-        android:text="Nhập Tên"
+        android:text="Nhập Tên Của Nàng"
         android:textAlignment="center"
         android:textSize="30dp" />
 

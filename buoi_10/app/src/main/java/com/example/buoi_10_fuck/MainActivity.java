@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 et1.getText().toString(), Toast.LENGTH_SHORT).show();*/
         AlertDialog.Builder al1 = new AlertDialog.Builder(this);
         al1.setIcon(R.drawable.ic_plus);
-        al1.setTitle("Tiêu đề");
-        al1.setMessage("Thử nghiệm");
+        al1.setTitle("Tên nàng là");
+        al1.setMessage(et1.getText().toString());
         al1.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
