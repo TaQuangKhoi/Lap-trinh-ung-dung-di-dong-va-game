@@ -1,4 +1,4 @@
-package com.example.buoi_10_fuck;
+package com.example.buoi_10;
 
 import android.content.DialogInterface;
 import android.os.Bundle;

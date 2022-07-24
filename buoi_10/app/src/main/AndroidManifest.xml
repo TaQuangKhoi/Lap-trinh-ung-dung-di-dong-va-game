@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.buoi_10_fuck">
+    package="com.example.buoi_10">
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Buoi_10_fuck"
         tools:targetApi="31">
         <activity
-            android:name=".cach_3"
+            android:name="com.example.buoi_10.cach_3"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.Buoi_10_fuck.NoActionBar">
