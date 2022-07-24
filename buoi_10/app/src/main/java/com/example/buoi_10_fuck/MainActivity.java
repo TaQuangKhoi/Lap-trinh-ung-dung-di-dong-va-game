@@ -29,29 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main); // Chỉnh cái này
-
-        //setSupportActionBar(binding.toolbar);
-
-       /*ontroller navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-*/
-        /*
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
 
         // Ánh xạ
         tv1 = (TextView)findViewById(R.id.tv1); // Thêm cài này để ánh xạ:v - từ android 3., có thễ bỏ qua ép kiểu
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         et1 = (EditText) findViewById(R.id.et1);
+
         // Đăng ký Event
         /* Cach 2
         btn1.setOnClickListener(new View.OnClickListener() {
