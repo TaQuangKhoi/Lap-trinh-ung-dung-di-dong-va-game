@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         list.set(i, et1.getText().toString());
-                        adapter_data_os.notifyDataSetChanged();
+                        adapter_data_os.notifyDataSetChanged(); // Cập nhật lại adapter
                     }
                 });
             }
