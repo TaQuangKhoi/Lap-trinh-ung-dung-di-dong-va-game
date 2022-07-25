@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
         lv1 = findViewById(R.id.lv1);
 
         // Tạo dữ liệu
-        final String[] data = {"Android", "IOS", "Windows", "Linux", "Mac OS", "Ubuntu", "Debian"};
+        //final String[] data = {"Android", "IOS", "Windows", "Linux", "Mac OS", "Ubuntu", "Debian"};
+        final String[] data = getResources().getStringArray(R.array.list_os);
 
         // Tạo adapter
         ArrayAdapter adapter_data_os = new ArrayAdapter(this, android.R.layout.simple_list_item_1, data);
