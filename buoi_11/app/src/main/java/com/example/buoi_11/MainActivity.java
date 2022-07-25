@@ -15,7 +15,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ListView lv1;
     EditText et1;
-    Button btn1;
+    Button btnAdd;
+    Button btnChange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         // Các ánh xạ
         lv1 = findViewById(R.id.lv1);
         et1 = findViewById(R.id.et1);
-        btn1 = findViewById(R.id.btn1);
+        btnAdd = findViewById(R.id.btnadd);
+        btnChange = findViewById(R.id.btnchange);
 
         // Tạo dữ liệu
         //final String[] data = {"Android", "IOS", "Windows", "Linux", "Mac OS", "Ubuntu", "Debian"};
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         lv1.setAdapter(adapter_data_os);
 
         // Nhấn nút để thêm item vào lv với tên trong et1
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 list.add(et1.getText().toString());
@@ -56,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 et1.setText(list.get(i).toString());
+
+                /* Sau khi người dùng thay đổi txt của item,
+                thì nhấn btnChange để cập nhật txt mới cho item đó */
+                btnChange.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        list.set(i, et1.getText().toString());
+                        adapter_data_os.notifyDataSetChanged();
+                    }
+                });
             }
 
         });
@@ -68,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
     }
 
 }
