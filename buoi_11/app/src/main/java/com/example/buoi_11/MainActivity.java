@@ -32,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
         // Tạo dữ liệu
         //final String[] data = {"Android", "IOS", "Windows", "Linux", "Mac OS", "Ubuntu", "Debian"};
         // String[] data = getResources().getStringArray(R.array.list_os);
-        final String[] data = {"Android", "IOS", "Windows", "Linux", "Mac OS", "Ubuntu", "Debian"};
+        //final String[] data = {"Android", "IOS", "Windows", "Linux", "Mac OS", "Ubuntu", "Debian"};
+
         ArrayList list = new ArrayList <String>();
         list.add("Android");
         list.add("iOS");
+        list.add("Windows Phone");
 
 
         // Tạo adapter
