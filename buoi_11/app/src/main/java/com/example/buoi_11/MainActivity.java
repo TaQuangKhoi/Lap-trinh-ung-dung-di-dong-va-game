@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        // Nhấn Long Click để xoá item được chọn
         lv1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
