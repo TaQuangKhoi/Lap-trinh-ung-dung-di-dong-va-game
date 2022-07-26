@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-    Buses[] bus_list;
     BusesAdapter busAdapter;
     ListView lvBus;
 
@@ -33,11 +32,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void fakeData() {
-        bus_list = new Buses[3];
-        bus_list[0] = new Buses(R.drawable.bus_1, "Bus 1", "Hà Nội - Hồ Chí Minh");
-        bus_list[1] = new Buses(R.drawable.bus_2, "Bus 2", "Hà Nội - Hồ Chí Minh");
-        bus_list[2] = new Buses(R.drawable.bus_3, "Bus 3", "Hà Nội - Hồ Chí Minh");
-
-        busAdapter.addAll(bus_list);
+        busAdapter.add(new Buses(R.drawable.bus_red, "Bus 1", "Vũng Tàu - Hồ Chí Minh"));
+        busAdapter.add(new Buses(R.drawable.bus_yellow, "Bus 2", "Hồ Chí Minh - Vũng Tàu"));
+        busAdapter.add(new Buses(R.drawable.bus_blue, "Bus 3", "Hồ Chí Minh - Đà Nẵng"));
+        busAdapter.add(new Buses(R.drawable.bus_black, "Bus 4", "Đà Nẵng - Hồ Chí Minh"));
+        busAdapter.add(new Buses(R.drawable.bus_pink, "Bus 5", "Đà Lạ - Vũng Tàu"));
+        busAdapter.add(new Buses(R.drawable.bus_red, "Bus 6", "Vũng Tàu - Đà Lạ"));
+        busAdapter.add(new Buses(R.drawable.bus_yellow, "Bus 7", "Hồ Chí Minh - Đà Lạt"));
+        busAdapter.add(new Buses(R.drawable.bus_blue, "Bus 8", "Đà Lạt - Hồ Chí Minh"));
+        busAdapter.add(new Buses(R.drawable.bus_black, "Bus 9", "Hà Nội - Hồ Chí Minh"));
+        busAdapter.add(new Buses(R.drawable.bus_pink, "Bus 10", "Hồ Chí Minh - Hà Nội"));
+        busAdapter.add(new Buses(R.drawable.bus_red, "Bus 11", "Cần Thơ - Vũng Tàu"));
+        busAdapter.add(new Buses(R.drawable.bus_black, "Bus 12", "Vũng Tàu - Cần Thơ"));
     }
 }
