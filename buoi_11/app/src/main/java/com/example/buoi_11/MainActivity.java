@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo adapter
         ArrayAdapter adapter_data_os = new ArrayAdapter(this, android.R.layout.simple_list_item_1, list);
+        // this sẽ return về MainActivity - Activity mà nó sẽ hiển thị
 
         // Gán adapter cho listview
         lv1.setAdapter(adapter_data_os);
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 btnChange.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        list.set(i, et1.getText().toString());
+                        list.set(i, et1.getText().toString()); // set() để update data of item
                         adapter_data_os.notifyDataSetChanged(); // Cập nhật lại adapter
                     }
                 });
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         lv1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                list.remove(i);
+                list.remove(i); // remove() để xoá item với para là index của item
                 adapter_data_os.notifyDataSetChanged();
                 return true;
             }
