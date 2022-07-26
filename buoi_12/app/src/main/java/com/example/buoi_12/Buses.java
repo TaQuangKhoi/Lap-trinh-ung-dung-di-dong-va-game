@@ -40,7 +40,6 @@ public class Buses {
     /* Hàm toString() để in ra thông tin của đối tượng
     * Ghi đè method toString() của class Object
     */
-
     @Override
     public String toString() {
         return this.nameBus + " " + this.routeBus;
