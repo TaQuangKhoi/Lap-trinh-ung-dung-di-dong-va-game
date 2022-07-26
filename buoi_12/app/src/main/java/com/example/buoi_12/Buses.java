@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class Buses {
+package com.example.buoi_12;
+
+public class Buses {
+    private int idImage;
+    private String nameBus, routeBus;
 }
+
