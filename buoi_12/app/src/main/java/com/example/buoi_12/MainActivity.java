@@ -3,7 +3,10 @@ package com.example.buoi_12;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     BusesAdapter busAdapter;
@@ -28,7 +31,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
+        lvBus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(MainActivity.this, busAdapter.getItem(i).toString(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        lvBus.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                // Remove item from list
+                Toast.makeText(MainActivity.this, "Bạn đã xóa xe " +
+                                busAdapter.getItem(i).getNameBus(),
+                        Toast.LENGTH_SHORT).show();
+                busAdapter.remove(busAdapter.getItem(i));
+                return false;
+            }
+        });
     }
 
     private void fakeData() {
