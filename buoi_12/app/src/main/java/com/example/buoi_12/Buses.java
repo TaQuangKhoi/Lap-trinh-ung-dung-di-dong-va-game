@@ -1,5 +1,5 @@
 package com.example.buoi_12;
-
+// Lớp để taọ đối tượng chứa dữ liệu
 public class Buses {
     // Khai báo thuộc tính
     private int idImage;

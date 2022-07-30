@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 public class BusesAdapter extends ArrayAdapter<Buses> {
 
     // khai báo thuộc tính để có thể truy cập mọi nơi trong class
-    private Context context; // Trà về Activity mà ListView hiển thị
+    private Context context; // Trà về Activity mà ListView hiển thị - this
     private int resource; // loại layout cần được sử dụng
 
     // Viết lại Constructor
