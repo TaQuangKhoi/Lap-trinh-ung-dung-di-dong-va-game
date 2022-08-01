@@ -2,6 +2,7 @@ package com.example.kt_thuchanh_txcc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         ibRightArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this, grid_view.class);
+                startActivity(intent);
             }
         });
     }
