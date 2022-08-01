@@ -21,14 +21,14 @@ public class grid_view extends AppCompatActivity {
 
         gvChucNang.setAdapter(chucNangAdapter);
 
-
         Data();
+
     }
 
     private void Data() {
         chucNangAdapter.add(new ChucNang(R.drawable.coronavirus_sars_cov_2,
                 "Chức năng 1", 0xFF0000FF));
-        chucNangAdapter.add(new ChucNang(R.drawable.ic_add, "Chức năng 2", 0x2F542D));
+        chucNangAdapter.add(new ChucNang(R.drawable.ic_add, "Chức năng 2", Color.parseColor("#A68D11")));
         chucNangAdapter.add(new ChucNang(R.drawable.ic_agriculture, "Chức năng 3", Color.parseColor("#00ff00")));
         chucNangAdapter.add(new ChucNang(R.drawable.ic_alarm, "Chức năng 4", Color.parseColor("#6C5E18")));
         chucNangAdapter.add(new ChucNang(R.drawable.ic_airport, "Chức năng 5", Color.parseColor("#53DC93")));
