@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,11 +31,14 @@ public class ChucNangAdapter extends ArrayAdapter<ChucNang> {
 
         ImageView ivIcon = customView.findViewById(R.id.iv_icon);
         TextView tvChucNang = customView.findViewById(R.id.tv_chucnang);
+        LinearLayout gvChucNang = customView.findViewById(R.id.ll_chucnang);
 
         ChucNang chucNang = getItem(position);
 
         ivIcon.setImageResource(chucNang.getImIconID());
         tvChucNang.setText(chucNang.getTenChucNang());
+        gvChucNang.setBackgroundColor(chucNang.getBackgroundColor());
+
 
         return customView;
     }

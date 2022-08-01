@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/gv_chucnang"
+    android:id="@+id/ll_chucnang"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#BD3232"
     android:orientation="vertical"
     android:gravity="center">
 
-    <ImageView
+
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_icon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        
+
         android:src="@mipmap/ic_launcher" />
 
     <TextView

@@ -1,13 +1,14 @@
 package com.example.kt_thuchanh_txcc;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 
 public class ChucNang {
     int imIconID;
     String tenChucNang;
-    Color BackgroundColor;
+    int BackgroundColor;
 
-    public ChucNang(int imID, String tenChucNang, Color BackgroundColor) {
+    public ChucNang(int imID, String tenChucNang, int BackgroundColor) {
         this.imIconID = imID;
         this.tenChucNang = tenChucNang;
         this.BackgroundColor = BackgroundColor;
@@ -34,11 +35,11 @@ public class ChucNang {
         this.tenChucNang = tenChucNang;
     }
 
-    public Color getBackgroundColor() {
+    public int getBackgroundColor() {
         return BackgroundColor;
     }
 
-    public void setBackgroundColor(Color backgroundColor) {
+    public void setBackgroundColor(int backgroundColor) {
         this.BackgroundColor = backgroundColor;
     }
 }
