@@ -1,5 +1,6 @@
 package com.example.buoi_14_intent;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -55,9 +56,18 @@ public class MainActivity extends AppCompatActivity {
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(MainActivity.this, LearnIntentResult.class);
+                startActivityForResult(intent, 1);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == 1 && resultCode == 1 && data != null){
+
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     // Truyển dữ liệu với gói Bundle
