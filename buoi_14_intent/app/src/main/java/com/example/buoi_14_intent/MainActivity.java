@@ -8,12 +8,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button btnOpenFacebook;
     Button btnOpenSerializable;
     Button btnNhanTin;
     Button btnClick;
+    TextView tvName;
     public String[] mangTen = {"Khôi", "Thịnh", "Tâm", "Tiến"};
     HocSinh hs = new HocSinh("Khôi", "DH20LT");
 
@@ -62,10 +64,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Nhận kết quả từ intent
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(requestCode == 1 && resultCode == 1 && data != null){
-
+        if(requestCode == 1 && resultCode == RESULT_OK && data != null){
+            tvName = findViewById(R.id.tv_my_name);
+            tvName.setText(data.getStringExtra("dulieu"));
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

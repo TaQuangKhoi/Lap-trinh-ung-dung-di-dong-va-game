@@ -17,14 +17,14 @@ public class LearnIntentResult extends AppCompatActivity {
         setContentView(R.layout.activity_learn_intent_result);
 
         btnClickSendResult = findViewById(R.id.btn_click);
-        etTextPersonName = findViewById(R.id.etTextPersonName);
+        etTextPersonName = findViewById(R.id.et_text_person_name);
 
         btnClickSendResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent();
                 i.putExtra("dulieu", etTextPersonName.getText().toString());
-                setResult(1, i);
+                setResult(RESULT_OK, i);
                 finish();
             }
         });

@@ -10,7 +10,7 @@
     tools:context=".LearnIntentResult">
 
     <EditText
-        android:id="@+id/etTextPersonName"
+        android:id="@+id/et_text_person_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
