@@ -11,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     Button btnOpenFacebook;
     Button btnOpenSerializable;
+    Button btnNhanTin;
     public String[] mangTen = {"Khôi", "Thịnh", "Tâm", "Tiến"};
     HocSinh hs = new HocSinh("Khôi", "DH20LT");
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnOpenFacebook = findViewById(R.id.btn_open_facebook);
         btnOpenSerializable = findViewById(R.id.btn_open_serializable);
-
+        btnNhanTin = findViewById(R.id.btn_nhantin);
 
 
         btnOpenFacebook.setOnClickListener(new View.OnClickListener() {
@@ -41,9 +42,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        btnNhanTin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("sms:0935198419"));
+                intent.putExtra("sms_body", "Chào em");
+                startActivity(intent);
+            }
+        });
     }
 
+    // Truyển dữ liệu với gói Bundle
     private void PutExtraWithBundle() {
         Intent openSerializable = new Intent(MainActivity.this,
                 ShowDataSerializable.class);
@@ -58,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(openSerializable);
     }
 
+    // Gửi data với putExtra từng biến một..
     private void PutExtraSeperate() {
         Intent openSerializable = new Intent(MainActivity.this,
                 ShowDataSerializable.class);
