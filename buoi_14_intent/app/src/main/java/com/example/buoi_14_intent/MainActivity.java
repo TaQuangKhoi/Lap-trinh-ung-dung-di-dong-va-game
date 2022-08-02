@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnOpenFacebook;
     Button btnOpenSerializable;
     Button btnNhanTin;
+    Button btnClick;
     public String[] mangTen = {"Khôi", "Thịnh", "Tâm", "Tiến"};
     HocSinh hs = new HocSinh("Khôi", "DH20LT");
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnOpenFacebook = findViewById(R.id.btn_open_facebook);
         btnOpenSerializable = findViewById(R.id.btn_open_serializable);
         btnNhanTin = findViewById(R.id.btn_nhantin);
-
+        btnClick = findViewById(R.id.btn_click);
 
         btnOpenFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("sms:0935198419"));
                 intent.putExtra("sms_body", "Chào em");
                 startActivity(intent);
+            }
+        });
+
+        btnClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
