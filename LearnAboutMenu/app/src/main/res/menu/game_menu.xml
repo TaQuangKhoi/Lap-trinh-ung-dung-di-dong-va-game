@@ -2,18 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <item android:id="@+id/new_game"
+    <item
+        android:id="@+id/new_game"
         android:icon="@drawable/ic_add"
-        android:title="@string/new_game"
-        />
-    <item android:id="@+id/help"
+        android:title="@string/new_game" />
+    <item
+        android:id="@+id/help"
         android:icon="@drawable/help"
-        android:title="@string/help_button"
-        />
-    <item android:id="@+id/item3"
-        android:title="item3"
-        />
-    <item android:id="@+id/item4"
-        android:title="item4"
-        />
+        android:title="@string/help_button" />
+    <item
+        android:id="@+id/item3"
+        android:title="item3" />
+    <item
+        android:id="@+id/item4"
+        android:title="item4">
+        <menu>
+            <item
+                android:id="@+id/subitem1"
+                android:title="subitem 1" />
+            <item
+                android:id="@+id/subitem2"
+                android:title="subitem 2" />
+        </menu>
+    </item>
 </menu>
