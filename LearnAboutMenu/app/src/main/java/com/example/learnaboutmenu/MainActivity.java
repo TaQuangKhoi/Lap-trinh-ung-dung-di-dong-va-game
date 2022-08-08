@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Nhấn CT 2", Toast.LENGTH_SHORT).show();
                 break;
             default:
-
+                break;
         }
 
         return super.onContextItemSelected(item);
