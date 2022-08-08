@@ -14,14 +14,14 @@ import android.widget.Toast;
 import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tv = findViewById(R.id.textView);
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        registerForContextMenu(tv);
         setContentView(R.layout.activity_main);
+        tv = findViewById(R.id.textView);
+        registerForContextMenu(tv);
     }
 
     @Override
