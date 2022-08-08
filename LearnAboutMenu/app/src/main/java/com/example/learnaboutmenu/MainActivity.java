@@ -4,24 +4,36 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ActionMode;
 import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.zip.Inflater;
-
 public class MainActivity extends AppCompatActivity {
     TextView tv;
-
+    EditText et;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         tv = findViewById(R.id.textView);
+        et = findViewById(R.id.editText);
+
         registerForContextMenu(tv);
+
+        et.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                startActionMode(mActionModeCallback);
+                return false;
+            }
+        });
     }
 
     @Override
@@ -82,4 +94,36 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onContextItemSelected(item);
     }
+
+
+    private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
+        @Override
+        public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
+            MenuInflater inflater = actionMode.getMenuInflater();
+            inflater.inflate(R.menu.context_menu_ngu_canh, menu);
+            return false;
+        }
+
+        @Override
+        public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
+            return false;
+        }
+
+        @Override
+        public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
+            switch (menuItem.getItemId()){
+                case R.id.ct1:
+                    return true;
+                case R.id.ct2:
+                    et.getText().clear();
+                    Toast.makeText(MainActivity.this, "Đã xoá", Toast.LENGTH_SHORT).show();
+            }
+            return false;
+        }
+
+        @Override
+        public void onDestroyActionMode(ActionMode actionMode) {
+
+        }
+    };
 }
