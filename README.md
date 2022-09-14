@@ -1,7 +1,8 @@
-# Lập trình ứng dụng di động và game 1 - HK6
+# Lập trình ứng dụng di động và game
 
-## Phần 1
+## Phần 1 - HK6
 - Buổi 11 - ListView
 - Buổi 12 - Custom ListView
 
-## Phần 2
+## Phần 2 - HK7
+- Buổi 1 - Ôn tập - Intent, ListView
