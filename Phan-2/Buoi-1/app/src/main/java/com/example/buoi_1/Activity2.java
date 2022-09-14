@@ -22,6 +22,7 @@ public class Activity2 extends AppCompatActivity {
         Data();
     }
 
+    // Các Ánh Xạ
     private void Controls() {
         listView = findViewById(R.id.listView);
 
@@ -30,15 +31,18 @@ public class Activity2 extends AppCompatActivity {
         listView.setAdapter(atadapter);
     }
 
+    // Các Sự Kiện
     private void Events() {
-        // Sự kiện khi click vào 1 item trong ListView
+        // Click
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Activity2.this, atadapter.getItem(position).getNameAmThuc(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Activity2.this, atadapter.getItem(position).getNameAmThuc(),
+                        Toast.LENGTH_SHORT).show();
             }
         });
 
+        // Long Click
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -50,7 +54,7 @@ public class Activity2 extends AppCompatActivity {
         });
     }
 
-
+    // Dữ liệu
     private void Data(){
         atadapter.add(new AmThuc(R.drawable.ic_android_black_24dp, "Bánh mì"));
         atadapter.add(new AmThuc(R.drawable.ic_android_black_24dp, "Bánh tét"));
