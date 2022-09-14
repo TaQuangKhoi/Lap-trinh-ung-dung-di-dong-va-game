@@ -5,6 +5,7 @@ public class AmThuc {
     private int idImage;
     private String nameAmThuc;
 
+    // Hàm khỏi tạo
     public AmThuc(int idImage, String nameAmThuc) {
         this.idImage = idImage;
         this.nameAmThuc = nameAmThuc;
