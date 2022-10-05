@@ -17,9 +17,12 @@ public class NotificationApp extends Application {
 
     private void createNotificationChannel() {
         // Phải dùng API Level 26 trở lên
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+        //VERSION_CODES.O là Oreo - API Level 26
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             CharSequence name = getString(R.string.channel_name);
             String description = getString(R.string.channel_description);
+
+            // IMPORTANCE_DEFAULT là có âm thanh, có hiện thông báo
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
             channel.setDescription(description);
