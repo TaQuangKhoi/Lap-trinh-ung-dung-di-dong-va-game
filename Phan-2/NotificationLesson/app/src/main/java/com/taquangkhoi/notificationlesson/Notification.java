@@ -1,4 +1,16 @@
 package com.taquangkhoi.notificationlesson;
 
-public class Notification {
+import android.app.Application;
+
+public class Notification extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        createNotificationChannel();
+    }
+
+    private void createNotificationChannel() {
+    }
+
 }
