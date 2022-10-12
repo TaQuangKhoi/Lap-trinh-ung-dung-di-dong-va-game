@@ -14,6 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
+import com.taquangkhoi.learnnavigation.fragment.HistoryFragment;
+import com.taquangkhoi.learnnavigation.fragment.HomeFragment;
+import com.taquangkhoi.learnnavigation.fragment.StudentFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
@@ -49,18 +52,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // do something
-        } else if (id == R.id.nav_home) {
-            // do something
+            ReplaceFragment(new HomeFragment());
         } else if (id == R.id.nav_student) {
-            // do something
+            ReplaceFragment(new StudentFragment());
         } else if (id == R.id.nav_history) {
-            // do something
-        } else if (id == R.id.nav_myprofile) {
-            // do something
-        } else if (id == R.id.nav_change_password) {
-            // do something
+            ReplaceFragment(new HistoryFragment());
         }
+
         drawerLayout.closeDrawer(GravityCompat.START);
         return false;
     }
