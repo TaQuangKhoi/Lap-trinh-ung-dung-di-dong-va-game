@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
         addControls();
+        ReplaceFragment(new HomeFragment());
     }
 
     private void addControls() {
         drawerLayout = findViewById(R.id.drawer_layout);
         toolbar = findViewById(R.id.toolbar);
 
+        // Gắn Action Bar vào Main Activity (Vì mình xóa Action Bar trong Theme rồi)
         ActionBarDrawerToggle actionBarDrawerToggle =
                 new ActionBarDrawerToggle(this,
                         drawerLayout, toolbar,
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
+    // Ẩn Drawer khi nhấn nút Back
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
@@ -73,8 +76,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void ReplaceFragment (Fragment fragment) {
+        // FragmentTransaction - quản lý hàng đợi các fragment
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.replace(R.id.fragment_container, fragment); // giống stage git
+        fragmentTransaction.commit(); // giống như hàm update/commit trong git rồi push lên
     }
 }
