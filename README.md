@@ -6,3 +6,4 @@
 
 ## Phần 2 - HK7
 - Buổi 1 - Ôn tập - Intent, ListView
+- - Hôc về Navigation, hiểu thêm cách dùng Fragment
