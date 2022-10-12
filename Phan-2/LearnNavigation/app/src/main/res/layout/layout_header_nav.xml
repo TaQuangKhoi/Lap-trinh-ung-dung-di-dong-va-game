@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="200dp"
     android:orientation="vertical"
     android:padding="28dp"
     android:gravity="bottom">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="100dp"
+        android:layout_width="225dp"
+        android:layout_height="90dp"
         android:src="@drawable/logo_xanhtrong"
         />
     <TextView
@@ -20,6 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:text="Email: dhbrvt@bvu.edu.vn"
+        android:textSize="15dp"/>
 
 </LinearLayout>
