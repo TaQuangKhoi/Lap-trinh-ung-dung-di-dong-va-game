@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ChangeLanguages</string>
+    <string name="app_name">Change Languages</string>
+    <string name="content">Who is she?</string>
+    <string name="news">She is yours</string>
 </resources>
