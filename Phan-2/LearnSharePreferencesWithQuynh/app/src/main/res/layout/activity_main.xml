@@ -31,11 +31,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mã sinh viên"
+        android:text="Mật khẩu"
         android:layout_gravity="left"/>
 
     <EditText
-        android:id="@+id/edt_msv"
+        android:id="@+id/edt_password"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
 
