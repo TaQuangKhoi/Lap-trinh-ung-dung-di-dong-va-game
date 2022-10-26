@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">LearnSharePreferencesWithQuynh</string>
+    <string name="app_name">Học Shared Preferences với Quỳnh</string>
+    <string name="heading">Quỳnh Shared Preferences</string>
+    <string name="ho_ten">Họ và Tên</string>
+    <string name="mat_khau">Mật khẩu</string>
+    <string name="luu_info">Lưu thông tin dăng nhập</string>
+    <string name="dang_nhap">đăng nhập</string>
+    <string name="doi_mat_khau">Đổi ngôn ngữ</string>
 </resources>

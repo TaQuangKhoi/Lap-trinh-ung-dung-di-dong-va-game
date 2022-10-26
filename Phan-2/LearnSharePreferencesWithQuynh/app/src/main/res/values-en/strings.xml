@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LearnSharePreferencesWithQuynh</string>
+    <string name="heading">Quynh Shared Preferences</string>
+    <string name="ho_ten">Full Name</string>
+    <string name="mat_khau">Pasword</string>
+    <string name="luu_info">Save information</string>
+    <string name="dang_nhap">sign in</string>
+    <string name="doi_mat_khau">change language</string>
+</resources>

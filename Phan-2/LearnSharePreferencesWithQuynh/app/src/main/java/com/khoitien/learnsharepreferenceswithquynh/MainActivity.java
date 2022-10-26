@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,8 +18,12 @@ public class MainActivity extends AppCompatActivity {
     EditText edtMSV;
     CheckBox cbxSaveInfo;
     Button btnDangNhap;
+    TextView
+
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    String name;
+    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +54,11 @@ public class MainActivity extends AppCompatActivity {
         cbxSaveInfo.setOnCheckedChangeListener((compoundButton, b) -> {
             if (cbxSaveInfo.isChecked()){
                 SaveInfo();
-                editor.putBoolean("key_bool", b);
-                editor.apply();
+                editor.putBoolean("key_bool", b).apply();
                 Log.i("SaveInfo", "Đã luu");
             } else {
                 editor.clear();
-                editor.putBoolean("key_bool", b);
-                editor.apply();
+                editor.putBoolean("key_bool", b).apply();
                 Toast.makeText(MainActivity.this, "Đã xóa", Toast.LENGTH_SHORT);
                 Log.i("SaveInfo", "Đã xóa");
             }
@@ -68,17 +71,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void SaveInfo() {
-        editor.putString("key_name", edtHoTen.getText().toString()).apply();
-        editor.putString("key_password", edtMSV.getText().toString()).apply();
+        name = edtHoTen.getText().toString();
+        password = edtMSV.getText().toString();
+        editor.putString("key_name", name).apply();
+        editor.putString("key_password", password).apply();
         editor.commit();
+
         Toast.makeText(MainActivity.this, "Đã lưu", Toast.LENGTH_SHORT);
+        Log.i("SaveInfo", "Đã chạy hàm");
     }
 
     private void ReloadSavedInfo() {
         cbxSaveInfo.setChecked(sharedPreferences.getBoolean("key_bool", false));
         if(sharedPreferences.getBoolean("key_bool", false)){
-            String name = sharedPreferences.getString("key_name", "Hoten");
-            String password = sharedPreferences.getString("key_password", "Password");
+            name = sharedPreferences.getString("key_name", "Hoten");
+            password = sharedPreferences.getString("key_password", "Password");
             edtHoTen.setText(name);
             edtMSV.setText(password);
             Toast.makeText(MainActivity.this, "Đã khôi phục", Toast.LENGTH_SHORT);

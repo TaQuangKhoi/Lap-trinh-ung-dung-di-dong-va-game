@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quỳnh Shared Preferences"
+        android:text="@string/heading"
         android:gravity="center_horizontal"
         android:textSize="30dp"
         android:layout_marginBottom="100dp"
@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Họ và Tên"
+        android:text="@string/ho_ten"
         android:layout_gravity="left"/>
 
     <EditText
@@ -31,7 +31,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mật khẩu"
+        android:text="@string/mat_khau"
         android:layout_gravity="left"/>
 
     <EditText
@@ -43,12 +43,23 @@
         android:id="@+id/cbx_save_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lưu thông tin dăng nhập"/>
+        android:text="@string/luu_info"/>
 
     <Button
         android:id="@+id/btn_dang_nhap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="đăng nhập"/>
+        android:text="@string/dang_nhap"/>
+
+    <TextView
+        android:id="@+id/tvw_debug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doi_mat_khau"/>
 
 </LinearLayout>
