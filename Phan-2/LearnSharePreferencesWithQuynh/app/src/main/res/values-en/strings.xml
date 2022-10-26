@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LearnSharePreferencesWithQuynh</string>
+    <string name="app_name">Learn SharePreferences With Quynh</string>
     <string name="heading">Quynh Shared Preferences</string>
     <string name="ho_ten">Full Name</string>
     <string name="mat_khau">Pasword</string>

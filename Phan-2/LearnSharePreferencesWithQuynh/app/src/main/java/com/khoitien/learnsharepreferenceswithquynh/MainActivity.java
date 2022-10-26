@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText edtMSV;
     CheckBox cbxSaveInfo;
     Button btnDangNhap;
-    TextView
+    TextView tvwDebug;
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         edtMSV = findViewById(R.id.edt_password);
         cbxSaveInfo = findViewById(R.id.cbx_save_info);
         btnDangNhap = findViewById(R.id.btn_dang_nhap);
+        tvwDebug = findViewById(R.id.tvw_debug);
     }
 
     private void AddEvents() {
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("key_name", name).apply();
         editor.putString("key_password", password).apply();
         editor.commit();
-
+        tvwDebug.setText(name + password);
         Toast.makeText(MainActivity.this, "Đã lưu", Toast.LENGTH_SHORT);
         Log.i("SaveInfo", "Đã chạy hàm");
     }
@@ -90,5 +91,9 @@ public class MainActivity extends AppCompatActivity {
             edtMSV.setText(password);
             Toast.makeText(MainActivity.this, "Đã khôi phục", Toast.LENGTH_SHORT);
         }
+    }
+
+    private void ShowLanguageDialog () {
+        final String[] listAvailableLanguage = {"","",""};
     }
 }
