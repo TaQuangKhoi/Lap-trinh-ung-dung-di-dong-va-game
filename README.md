@@ -6,4 +6,7 @@
 
 ## Phần 2 - HK7
 - Buổi 1 - Ôn tập - Intent, ListView
-- - Học về Navigation, hiểu thêm cách dùng Fragment
+- LearnNavigation - Học về Navigation, hiểu thêm cách dùng Fragment
+- LearnSharePreferencesWithQuynh - SharedPreferences học về (có trục trặc, chưa chạy được)
+- NotificationLesson - Hiện thộng báo
+- ChangeLanguages - Chỉnh ngôn ngữ với string.xml
