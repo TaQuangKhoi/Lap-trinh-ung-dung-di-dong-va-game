@@ -14,7 +14,6 @@
         android:layout_weight="1"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/tvw_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
@@ -25,7 +24,6 @@
             android:layout_height="wrap_content"
             />
         <TextView
-            android:id="@+id/tvw_Content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Content"
@@ -35,16 +33,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/btn_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New"
+                android:backgroundTint="#567AE8"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:backgroundTint="#567AE8"
+                android:enabled="false"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:backgroundTint="#E60C0C"/>
+        </LinearLayout>
+
     </LinearLayout>
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        />
+        android:listSelector="#4E89E4"/>
 </LinearLayout>

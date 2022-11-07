@@ -11,6 +11,11 @@ public class Note {
         this.content = content;
     }
 
+    public Note(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
     public int getId() {
         return id;
     }
