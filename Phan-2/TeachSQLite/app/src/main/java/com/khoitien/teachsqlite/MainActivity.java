@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         LoadData();
         AddEvents();
         FirstShowData();
+
+        if (noteAdapter.getCount() == 0) {
+            btnSave.setEnabled(true);
+        }
     }
 
     private void AddControls() {
@@ -36,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void FirstShowData() {
-        Note note = noteAdapter.getItem(0);
-        edtTitle.setText(note.getTitle());
-        edtContent.setText(note.getContent());
+        if (noteAdapter.getCount() > 0) {
+            Note note = noteAdapter.getItem(0);
+            edtTitle.setText(note.getTitle());
+            edtContent.setText(note.getContent());
+        }
     }
 
     private void LoadData() {
@@ -65,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
             noteDbHelper.addNote(note);
 
             LoadData();
+
             btnSave.setEnabled(false);
+
         });
 
         lv.setOnItemClickListener((parent, view, position, id) -> {

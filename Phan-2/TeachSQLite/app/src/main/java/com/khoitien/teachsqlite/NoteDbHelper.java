@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
@@ -48,14 +47,17 @@ public class NoteDbHelper extends SQLiteOpenHelper {
         values.put(KEY_CONTENT, note.getContent());
 
         db.insert(TABLE_NAME, null, values);
+
         db.close();
     }
 
     public Note getNote(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(TABLE_NAME, new String[]{KEY_ID, KEY_TITLE, KEY_CONTENT},
-                KEY_ID + "=?", new String[]{String.valueOf(id)}, null, null, null, null);
+        Cursor cursor = db.query(TABLE_NAME,
+                new String[]{KEY_ID, KEY_TITLE, KEY_CONTENT},
+                KEY_ID + "=?", new String[]{String.valueOf(id)},
+                null, null, null, null);
 
         if (cursor != null) {
             cursor.moveToFirst();
@@ -73,6 +75,7 @@ public class NoteDbHelper extends SQLiteOpenHelper {
         String selectQuery = "SELECT * FROM " + TABLE_NAME;
 
         SQLiteDatabase db = this.getWritableDatabase();
+
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         cursor.moveToFirst();
@@ -81,6 +84,7 @@ public class NoteDbHelper extends SQLiteOpenHelper {
             Note note = new Note(cursor.getInt(0), cursor.getString(1), cursor.getString(2));
 
             noteList.add(note);
+
             cursor.moveToNext();
         }
 
@@ -94,13 +98,17 @@ public class NoteDbHelper extends SQLiteOpenHelper {
         values.put(KEY_TITLE, note.getTitle());
         values.put(KEY_CONTENT, note.getContent());
 
-        db.update(TABLE_NAME, values, KEY_ID + "=?", new String[]{String.valueOf(note.getId())});
+        db.update(TABLE_NAME, values, KEY_ID + "=?",
+                new String[]{String.valueOf(note.getId())});
+
         db.close();
     }
 
     public void deleteNote (Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
+
         db.delete(TABLE_NAME, KEY_ID + "=?", new String[]{String.valueOf(note.getId())});
+
         db.close();
     }
 }
