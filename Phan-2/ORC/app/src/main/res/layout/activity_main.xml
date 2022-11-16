@@ -46,10 +46,12 @@
             android:text="Pick Photo" />
         
         <Button
+            android:layout_margin="10dp"
             android:id="@+id/btnCopy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pick Photo"/>
+            android:visibility="gone"
+            android:text="Copy"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
