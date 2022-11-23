@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference testRef = database.getReference("message");
     private static final String TAG = "MainActivity";
+    EditText edtName, edtAge;
+    Button btnCreate;
+    DAOPerson daoPerson = new DAOPerson();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +29,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         addControls();
+        addEvents();
 
         testReadFromDB();
 
     }
 
+    private void addEvents() {
+        addButtonCreateClickEvent();
+    }
+
+    private void addButtonCreateClickEvent() {
+        btnCreate.setOnClickListener(v -> {
+            if (checkDatatypeOfEditText()){
+                String name = edtName.getText().toString();
+                String age = edtAge.getText().toString();
+                Person person = new Person(name, age);
+                daoPerson.add(person);
+                Toast.makeText(MainActivity.this, "Create successfully", Toast.LENGTH_SHORT).show();
+            } else {
+                Log.d(TAG, "addEvents: Wrong datatype");
+                Toast.makeText(this, "addEvents: Wrong datatype", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     private void addControls() {
+        edtName = findViewById(R.id.edtName);
+        edtAge = findViewById(R.id.edtAge);
+        btnCreate = findViewById(R.id.btnCreate);
     }
 
     private void testWriteToDB() {
@@ -53,5 +82,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+    }
+
+    // Check datatype of two EditText views
+    private boolean checkDatatypeOfEditText() {
+        String name = edtName.getText().toString();
+        String age = edtAge.getText().toString();
+        if (age.matches("[0-9]+")
+                && name.length() > 0 && age.length() > 0) {
+            return true;
+        }
+        return false;
     }
 }

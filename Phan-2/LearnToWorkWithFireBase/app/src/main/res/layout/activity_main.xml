@@ -12,16 +12,16 @@
         android:layout_height="100dp"
         android:src="@drawable/_280px_firebase_logo_svg"/>
     <EditText
-        android:id="@+id/ettName"
+        android:id="@+id/edtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name"
         />
     <EditText
-        android:id="@+id/ettOld"
+        android:id="@+id/edtAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Old"
+        android:hint="Age"
         />
     <Button
         android:id="@+id/btnCreate"
