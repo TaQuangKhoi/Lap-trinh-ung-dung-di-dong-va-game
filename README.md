@@ -10,3 +10,8 @@
 - LearnSharePreferencesWithQuynh - SharedPreferences học về (có trục trặc, chưa chạy được)
 - NotificationLesson - Hiện thộng báo
 - ChangeLanguages - Chỉnh ngôn ngữ với string.xml
+- LearnToWorkWithFireBase - Học với Thịnh 23-Nov-2022 09:36 
+- ORC - 
+- PresentSQLite
+- TeachSQLite
+- TienLuyenTay
