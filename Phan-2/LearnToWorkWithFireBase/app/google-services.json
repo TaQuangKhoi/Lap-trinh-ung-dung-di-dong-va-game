@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "301528999076",
+    "firebase_url": "https://taquangkhoi-dev-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "taquangkhoi-dev",
+    "storage_bucket": "taquangkhoi-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301528999076:android:f30b3f9ae9ea077301f231",
+        "android_client_info": {
+          "package_name": "com.taquangkhoi.learntoworkwithfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301528999076-hq930sp8aohbtvrhuna2ifmq1fep9amh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD127ME1uN3RHLVSs6jk0lT3CV4zLPf2gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301528999076-hq930sp8aohbtvrhuna2ifmq1fep9amh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
