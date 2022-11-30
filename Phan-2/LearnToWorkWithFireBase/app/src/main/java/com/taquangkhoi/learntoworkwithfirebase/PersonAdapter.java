@@ -47,7 +47,7 @@ public class PersonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             popupMenu.inflate(R.menu.option_menu);
             popupMenu.setOnMenuItemClickListener(item -> {
                 switch (item.getItemId()) {
-                    case R.id.menu_update:
+                    case R.id.menuUpdate:
                         EditText edtTextName, edtTextAge;
                         LayoutInflater inflater = LayoutInflater.from(context);
                         final View textEntryView = inflater.inflate(R.layout.custom_alert_dialog, null);
@@ -60,7 +60,7 @@ public class PersonAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                         edtTextAge = textEntryView.findViewById(R.id.editTextAge);
 
                         break;
-                    case R.id.menu_delete:
+                    case R.id.menuDelete:
 
                         break;
                 }
