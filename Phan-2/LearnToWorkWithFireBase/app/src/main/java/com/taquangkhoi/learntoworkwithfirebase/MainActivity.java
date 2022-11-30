@@ -1,6 +1,8 @@
 package com.taquangkhoi.learntoworkwithfirebase;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,24 +17,36 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference testRef = database.getReference("message");
+    DatabaseReference personRef = database.getReference("Person");
     private static final String TAG = "MainActivity";
     EditText edtName, edtAge;
     Button btnCreate;
     DAOPerson daoPerson = new DAOPerson();
+    PersonAdapter personAdapter = new PersonAdapter(this);
+    ArrayList persons = new ArrayList<Person>();
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         addControls();
         addEvents();
-
         testReadFromDB();
-
+        try {
+            Read();
+        } catch (Exception e) {
+            Log.d(TAG, "onCreate: " + e.getMessage());
+        } finally {
+            Log.d(TAG, "onCreate: finally");
+        }
     }
 
     private void addEvents() {
@@ -43,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         btnCreate.setOnClickListener(v -> {
             if (checkDatatypeOfEditText()){
                 String name = edtName.getText().toString();
-                String age = edtAge.getText().toString();
+                int age = Integer.parseInt(edtAge.getText().toString());
                 Person person = new Person(name, age);
                 daoPerson.add(person);
                 Toast.makeText(MainActivity.this, "Create successfully", Toast.LENGTH_SHORT).show();
@@ -58,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         edtName = findViewById(R.id.edtName);
         edtAge = findViewById(R.id.edtAge);
         btnCreate = findViewById(R.id.btnCreate);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setAdapter(personAdapter);
     }
 
     private void testWriteToDB() {
@@ -93,5 +109,26 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+
+    public void Read() {
+        daoPerson.getUser().addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Person person = dataSnapshot.getValue(Person.class);
+                    person.setKey(dataSnapshot.getKey());
+                    Log.d(TAG, "onDataChange: " + person.toString());
+                    persons.add(person);
+                }
+                personAdapter.setItems(persons);
+                personAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

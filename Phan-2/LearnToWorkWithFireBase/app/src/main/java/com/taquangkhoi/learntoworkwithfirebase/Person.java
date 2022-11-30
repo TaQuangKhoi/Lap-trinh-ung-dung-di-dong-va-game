@@ -1,15 +1,16 @@
 package com.taquangkhoi.learntoworkwithfirebase;
 
 public class Person {
-    String key, name, age;
+    String key, name;
+    int age;
 
-    public Person(String key, String name, String age) {
+    public Person(String key, String name, int age) {
         this.key = key;
         this.name = name;
         this.age = age;
     }
     
-    public Person(String name, String age) {
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -30,11 +31,11 @@ public class Person {
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

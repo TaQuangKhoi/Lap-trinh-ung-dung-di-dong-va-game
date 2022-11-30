@@ -14,14 +14,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:id="@+id/textViewName"
+                android:id="@+id/tvwName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="24dp"
                 android:text="Name" />
             <TextView
-                android:id="@+id/textViewOption"
+                android:id="@+id/tvwOption"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:textSize="24dp"
@@ -29,11 +29,11 @@
                 android:text="&#8942;" />
         </LinearLayout>
         <TextView
-            android:id="@+id/textViewOld"
+            android:id="@+id/tvwAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
             android:layout_weight="1"
-            android:text="Old" />
+            android:text="Age" />
     </LinearLayout>
 </LinearLayout>
