@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 task.getResult(ApiException.class);
                 ProfileActivity();
             } catch (ApiException e) {
+                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
         }
@@ -60,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
     void ProfileActivity() {
         finish();
-        Intent intent = new Intent(this, SignOutActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(this, SignOutActivity.class));
     }
 }

@@ -36,6 +36,7 @@ public class SignOutActivity extends AppCompatActivity {
         googleSignInClient = GoogleSignIn.getClient(this, gso);
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+
         if (account != null) {
             tvwName.setText(account.getDisplayName());
             tvwAge.setText(account.getEmail());
