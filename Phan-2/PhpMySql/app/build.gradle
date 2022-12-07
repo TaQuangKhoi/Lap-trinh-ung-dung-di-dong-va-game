@@ -36,5 +36,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // Để gọi api php từ server
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // convert json object sang java object và ngược lại
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    // convert string của php sang string của java
+    implementation 'com.squareup.picasso:picasso:2.8'
+    // lấy ảnh từ url truyền vào imageview
 }
